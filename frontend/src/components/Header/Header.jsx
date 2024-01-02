@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
-import { NavLink } from 'react-router-dom'; // Import NavLink from react-router-dom
+import { Link, NavLink } from 'react-router-dom'; // Import NavLink from react-router-dom
 import logo from '../../assets/images/logo.png';
+import userImg from '../../assets/images/avatar-icon.png';
 
 const navLinks = [
   {
@@ -48,6 +49,17 @@ const Header = () => {
               </li>
             ))}
           </ul>
+        </div>
+        {/* ====== nav right */}
+        <div className='flex items-center gap-4'>
+          <div>
+            <Link to='/'>
+              <figure className='w-[35px] h-[35px] rounded-full'>
+                <img src={userImg} className='w-full rounded-full' alt='User Icon'/>
+              </figure>
+            </Link>
+          </div>
+
         </div>
       </div>
     </header>
